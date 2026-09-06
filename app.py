@@ -821,4 +821,4 @@ PDF Context:
 
         st.subheader("📚 Study Notes")
 
-       st.markdown(response.text)
+         st.markdown(response.text)
