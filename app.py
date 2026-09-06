@@ -689,7 +689,7 @@ PDF Context:
 
         st.subheader("📄 PDF Summary")
 
-        st.markdown(response.content)
+        st.markdown(response.text)
         # =====================================================
 # MCQ GENERATOR
 # =====================================================
@@ -731,7 +731,7 @@ PDF Context:
 
         st.subheader("📝 MCQ Generator")
 
-        st.markdown(response.content)
+        st.markdown(response.text)
         # =====================================================
 # VIVA QUESTION GENERATOR
 # =====================================================
@@ -776,7 +776,7 @@ PDF Context:
 
         st.subheader("🎤 Viva Questions")
 
-        st.markdown(response.content)
+        st.markdown(response.text)
         # =====================================================
 # STUDY NOTES GENERATOR
 # =====================================================
@@ -821,4 +821,4 @@ PDF Context:
 
         st.subheader("📚 Study Notes")
 
-        st.markdown(response.content)
+       st.markdown(response.text)
