@@ -8,8 +8,10 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 
-from langchain_ollama import ChatOllama
-from langchain_ollama.embeddings import OllamaEmbeddings
+from langchain_google_genai import (
+    ChatGoogleGenerativeAI,
+    GoogleGenerativeAIEmbeddings
+)
 
 
 # =====================================================
@@ -59,13 +61,14 @@ if "chat_id" not in st.session_state:
 # AI MODELS
 # =====================================================
 
-embedding = OllamaEmbeddings(
-    model="nomic-embed-text"
+embedding = GoogleGenerativeAIEmbeddings(
+    model="models/gemini-embedding-001"
 )
 
-llm = ChatOllama(
-    model="llama3.2:latest",
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.5-flash",
     temperature=0
+)
 )
 # =====================================================
 # CHAT HISTORY FUNCTIONS
