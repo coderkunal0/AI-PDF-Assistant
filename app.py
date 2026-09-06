@@ -634,7 +634,7 @@ Generate the best possible answer.
     )
 )
 
-                answer = response.content
+                answer = response.text
 
                 st.markdown(answer)
 
