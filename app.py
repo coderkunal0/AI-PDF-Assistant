@@ -62,12 +62,14 @@ if "chat_id" not in st.session_state:
 # =====================================================
 
 embedding = GoogleGenerativeAIEmbeddings(
-    model="models/gemini-embedding-001"
+    model="models/gemini-embedding-001",
+    google_api_key=os.getenv("GOOGLE_API_KEY")
 )
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
-    temperature=0
+    temperature=0,
+    google_api_key=os.getenv("GOOGLE_API_KEY")
 )
 
 # =====================================================
